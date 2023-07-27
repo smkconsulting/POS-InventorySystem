@@ -21,12 +21,12 @@ namespace POS_InventoryWinformUI
             InitializeComponent();
             this._frmBrandList = frm;
         }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (txtBrandName.Text!=string.Empty && txtBrandName.Text.Length>2)
             {
-                var result = MessageBox.Show("Are you sure you want to Add " + txtBrandName.Text,"confirm",MessageBoxButtons.YesNo);
+                var result = MessageBox.Show("Are you sure you want to Add " + 
+                    txtBrandName.Text,"confirm",MessageBoxButtons.YesNo);
                 if (result==DialogResult.Yes)
                 {
                     var db = new BrandRepository();
@@ -63,6 +63,30 @@ namespace POS_InventoryWinformUI
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (txtBrandName.Text != string.Empty && txtBrandName.Text.Length > 2)
+            {
+                var result = MessageBox.Show("Are you sure you want to Update " +
+                    txtBrandName.Text, "confirm", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    var db = new BrandRepository();
+                    db.Update(new BrandBO() { BrandId = int.Parse(lblId.Text), Name = txtBrandName.Text });
+                    _frmBrandList.LoadRecords();
+                    MessageBox.Show("Brand Updated successfully");
+                    this.Close();
+
+                }
+                else
+                {
+                    ClearBoxes();
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Brand Name is empty or less than 3 characters", "invalid");
+                return;
+            }
 
         }
     }
