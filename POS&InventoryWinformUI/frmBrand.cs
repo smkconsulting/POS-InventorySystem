@@ -15,9 +15,11 @@ namespace POS_InventoryWinformUI
 {
     public partial class frmBrand : Form
     {
-        public frmBrand()
+        private readonly frmBrandList _frmBrandList;
+        public frmBrand(frmBrandList frm)
         {
             InitializeComponent();
+            this._frmBrandList = frm;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -29,15 +31,14 @@ namespace POS_InventoryWinformUI
                 {
                     var db = new BrandRepository();
                     db.Add(new BrandBO() { Name = txtBrandName.Text });
+                    _frmBrandList.LoadRecords();
                     MessageBox.Show("Brand Added successfully");
-                    txtBrandName.Clear();
-                    txtBrandName.Focus();
+                    ClearBoxes();
                     return;
                 }
                 else
                 {
-                    txtBrandName.Clear();
-                    txtBrandName.Focus();
+                    ClearBoxes();
                     return;
                 }
             }
@@ -47,17 +48,19 @@ namespace POS_InventoryWinformUI
                 return;
             }
         }
-
+        private void ClearBoxes()
+        {
+            txtBrandName.Clear();
+            txtBrandName.Focus();
+        }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
 
