@@ -37,6 +37,9 @@ namespace POS_InventoryWinformUI
             OpenChildForm(new frmBrandList());
         }
 
-
+        private void btnManageCategory_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmCategoryList());
+        }
     }
 }

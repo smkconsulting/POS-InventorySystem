@@ -66,7 +66,9 @@
     <Compile Include="DatabaseFactory.cs" />
     <Compile Include="DatabaseType.cs" />
     <Compile Include="Entities\BrandDAL.cs" />
+    <Compile Include="Entities\CategoryDAL.cs" />
     <Compile Include="Entities\IBrandRepository.cs" />
+    <Compile Include="Entities\ICategoryRepository.cs" />
     <Compile Include="ICrud.cs" />
     <Compile Include="IDatabase.cs" />
     <Compile Include="MyDbParater.cs" />

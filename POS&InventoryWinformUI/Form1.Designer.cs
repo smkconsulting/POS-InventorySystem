@@ -41,7 +41,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.btnManageBrand = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnManageCategory = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,7 +71,7 @@
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.btnManageBrand);
             this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnManageCategory);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 43);
             this.panel2.Name = "panel2";
@@ -239,21 +239,22 @@
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnManageCategory
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::POS_InventoryWinformUI.Properties.Resources.category;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 254);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(232, 42);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "   Manage Category";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnManageCategory.FlatAppearance.BorderSize = 0;
+            this.btnManageCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageCategory.ForeColor = System.Drawing.Color.White;
+            this.btnManageCategory.Image = global::POS_InventoryWinformUI.Properties.Resources.category;
+            this.btnManageCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageCategory.Location = new System.Drawing.Point(12, 254);
+            this.btnManageCategory.Name = "btnManageCategory";
+            this.btnManageCategory.Size = new System.Drawing.Size(232, 42);
+            this.btnManageCategory.TabIndex = 0;
+            this.btnManageCategory.Text = "   Manage Category";
+            this.btnManageCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnManageCategory.UseVisualStyleBackColor = true;
+            this.btnManageCategory.Click += new System.EventHandler(this.btnManageCategory_Click);
             // 
             // mainPanel
             // 
@@ -290,7 +291,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnManageBrand;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnManageCategory;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button9;
